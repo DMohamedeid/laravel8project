@@ -54,3 +54,5 @@ Route::match(['get' , 'put' ,'post'] ,'/home7',function(Request $request){
 Route::any('home8', function (Request $request){
    return 'this any accept all the requests post get put delete the method is --> ' .$request->method();
 });
+
+//check the updates
