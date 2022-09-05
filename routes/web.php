@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -21,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/home',[HomeController::class,'index'])->name('home.index'); //always name the route with the controller and the needed function
 Route::get('/home/{parameter}',[HomeController::class,'parameter'])->name('home.parameter');
+
+Route::get('users',[UserController::class,'index'])->name('users.index'); //don't use this route because there is variables declared in the view
+Route::get('userValues',[UserController::class,'values'])->name('user.values');
