@@ -1,3 +1,14 @@
 to make a controller
-==>php artisan make:controller {ControllerName}
+==> php artisan make:controller {ControllerName}
+
+------------------------------------------------------------------------------------------------------------------------
+Blade Component is to use to yield or extends the view in other pages
+
+to make class component
+==> php artisan make:component {componentName}
+and it creates two file
+        one in App\view\component
+and the other in views\component
+
+------------------------------------------------------------------------------------------------------------------------
 

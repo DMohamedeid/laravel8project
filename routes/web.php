@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductController::class,'index'])->name('product.index');
 
 Route::get('/home',[HomeController::class,'index'])->name('home.index'); //always name the route with the controller and the needed function
 Route::get('/home/{parameter}',[HomeController::class,'parameter'])->name('home.parameter');
