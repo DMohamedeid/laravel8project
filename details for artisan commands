@@ -1,0 +1,2 @@
+to make a controller
+==>php artisan make:controller {ControllerName}
