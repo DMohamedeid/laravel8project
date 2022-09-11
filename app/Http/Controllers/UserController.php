@@ -23,4 +23,12 @@ class UserController extends Controller
 
         return view('users',compact('user','person'));
     }
+
+    public function login(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->password;
+
+        return 'E-Mail : ' . $email . '<br>' . 'Password : ' . $password;
+    }
 }

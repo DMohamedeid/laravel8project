@@ -30,14 +30,20 @@ Route::get('/posts',[PostController::class,'index'])->name('post.index');
 
 Route::get('/posts/{id}',[PostController::class,'show'])->name('post.show');
 
-Route::get('posts-add',[PostController::class,'store'])->name('posts.store');
+Route::get('/posts-add',[PostController::class,'store'])->name('posts.store');
 
-Route::get('posts-update/{id}',[PostController::class,'update'])->name('posts.update');
+Route::get('/posts-update/{id}',[PostController::class,'update'])->name('posts.update');
 
-Route::get('posts-delete/{id}',[PostController::class,'delete'])->name('posts.delete');
+Route::get('/posts-delete/{id}',[PostController::class,'delete'])->name('posts.delete');
 
 //Route::get('/token', function () {
 //    return csrf_token();
 //});
 
 Route::get('fluent-string',[HomeController::class,'fluentStrings'])->name('home.fluentStrings');
+
+Route::get('/login',function (){
+    return view('login');
+});
+
+Route::post('/login/user',[UserController::class,'login'])->name('user.login');
