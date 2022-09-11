@@ -39,3 +39,5 @@ Route::get('posts-delete/{id}',[PostController::class,'delete'])->name('posts.de
 //Route::get('/token', function () {
 //    return csrf_token();
 //});
+
+Route::get('fluent-string',[HomeController::class,'fluentStrings'])->name('home.fluentStrings');
