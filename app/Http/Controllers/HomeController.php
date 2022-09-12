@@ -51,4 +51,28 @@ class HomeController extends Controller
         $string7 = Str::of('/laravel/8/framework/')->trim('/');
         echo $string7 . '<br>';
     }
+
+    public function getSession(Request $request)
+    {
+        if ($request->session()->has('name'))
+        {
+            return $request->session()->get('name');
+        }
+
+        return "there Is no data in the session";
+    }
+
+    public function storeSession(Request $request)
+    {
+        $request->session()->put('name' , 'Mohamed');
+
+        echo "Session has been stored";
+    }
+
+    public function deleteSession(Request $request)
+    {
+        $request->session()->forget('name');
+
+        echo "session has been deleted";
+    }
 }
