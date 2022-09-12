@@ -49,8 +49,11 @@ Route::get('/login',function (){
 Route::post('/login/user',[UserController::class,'login'])->name('user.login')->middleware('checkUser');
 
 // Session routs
-Route::get('session' , [HomeController::class,'getSession'])->name('home.getSession');
+Route::get('/session' , [HomeController::class,'getSession'])->name('home.getSession');
 
-Route::get('session/put' , [HomeController::class,'storeSession'])->name('home.storeSession');
+Route::get('/session/put' , [HomeController::class,'storeSession'])->name('home.storeSession');
 
-Route::get('session/delete' , [HomeController::class,'deleteSession'])->name('home.deleteSession');
+Route::get('/session/delete' , [HomeController::class,'deleteSession'])->name('home.deleteSession');
+
+//database
+Route::get('/posts_DB',[PostController::class,'allPostsDB'])->name('post.allPostsDB');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
 class PostController extends Controller
@@ -51,6 +52,16 @@ class PostController extends Controller
         $response = Http::delete('https://jsonplaceholder.typicode.com/posts/'.$id);
 
         return $response->json();
+    }
+
+
+
+
+    public function allPostsDB()
+    {
+        $posts = DB::table('posts')->get();
+
+        return view('posts', compact('posts'));
     }
 
 }
