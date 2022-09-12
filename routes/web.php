@@ -46,4 +46,4 @@ Route::get('/login',function (){
     return view('login');
 });
 
-Route::post('/login/user',[UserController::class,'login'])->name('user.login');
+Route::post('/login/user',[UserController::class,'login'])->name('user.login')->middleware('checkUser');

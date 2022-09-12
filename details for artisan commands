@@ -13,3 +13,14 @@ and the other in views\component
 ------------------------------------------------------------------------------------------------------------------------
 
 change the repo
+
+------------------------------------------------------------------------------------------------------------------------
+creating new middleware
+
+php artisan make:middleware {middleware name}
+
+we can use middleware global and at route
+
+to make it global we add it in kernel.php
+
+and individual  from the kernel.php too
