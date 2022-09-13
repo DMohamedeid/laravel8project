@@ -56,4 +56,18 @@ Route::get('/session/put' , [HomeController::class,'storeSession'])->name('home.
 Route::get('/session/delete' , [HomeController::class,'deleteSession'])->name('home.deleteSession');
 
 //database
-Route::get('/posts_DB',[PostController::class,'allPostsDB'])->name('post.allPostsDB');
+Route::get('/posts_DB',[PostController::class,'allPostsDB'])->name('post.indexPostsDB');
+
+Route::get('/posts_DB-add',function (){
+    return view('Posts.add');
+})->name('post.addPostDB');
+
+Route::post('/posts_DB-store',[PostController::class,'storePostDB'])->name('post.storePostDB');
+
+Route::get('/posts_DB-show/{id}/{type}',[PostController::class,'showPostDB'])->name('post.showPostDB');
+
+Route::post('/posts_DB-update',[PostController::class,'updatePostDB'])->name('post.updatePostDB');
+
+Route::get('/posts_DB-delete/{id}',[PostController::class,'deletePostDB'])->name('post.deletePostDB');
+
+
