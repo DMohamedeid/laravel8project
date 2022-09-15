@@ -45,10 +45,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($posts as $post)
+                            @foreach($posts as $key => $post)
                                 <tr>
                                     <th >
-                                        {{$post->id}}
+                                        {{$key++}}
                                     </th>
                                     <th >
                                         {{$post->title}}

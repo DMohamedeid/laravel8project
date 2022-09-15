@@ -70,4 +70,10 @@ Route::post('/posts_DB-update',[PostController::class,'updatePostDB'])->name('po
 
 Route::get('/posts_DB-delete/{id}',[PostController::class,'deletePostDB'])->name('post.deletePostDB');
 
+Route::get('/inner-join',[PostController::class,'innerJoin']);
+
+Route::get('/left-join',[PostController::class,'leftJoin']);
+
+Route::get('/right-join',[PostController::class,'rightJoin']);
+
 

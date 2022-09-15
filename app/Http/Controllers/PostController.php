@@ -112,4 +112,31 @@ class PostController extends Controller
         return redirect()->route('post.indexPostsDB')->with('post_deleted','Post Has been Deleted');
     }
 
+    public function innerJoin()
+    {
+        $request = DB::table('users')
+            ->join('posts','users.id','=','posts.user_id')
+            ->select('users.id','users.name','posts.title','posts.body')
+            ->get();
+        return $request;
+    }
+
+    public function leftJoin()
+    {
+        $request = DB::table('users')
+            ->leftJoin('posts','users.id' , '=' ,'posts.user_id')
+            ->select('users.id','users.name','posts.title','posts.body')
+            ->get();
+        return $request;
+    }
+
+    public function rightJoin()
+    {
+        $request = DB::table('users')
+            ->rightJoin('posts','users.id' , '=' ,'posts.user_id')
+            ->select('users.id','users.name','posts.title','posts.body')
+            ->get();
+
+        return $request;
+    }
 }
