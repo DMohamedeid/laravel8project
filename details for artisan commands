@@ -46,4 +46,16 @@ to rollback with last update migrations you created and delete the hall table de
 to delete the last number of operations on migration
 --> php artisan migrate:rollback --step={ number of operations u want to rollback}
 
+------------------------------------------------------------------------------------------------------------------------
+
+to creat factory multiple records in database use factory
+
+--> php artisan make:factory {name of Factory} --model=Post
+
+to create specific records use seeder
+
+--> php artisan make:seeder {name of Seeder}
+
+------------------------------------------------------------------------------------------------------------------------
+
 
