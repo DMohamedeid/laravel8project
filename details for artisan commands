@@ -36,3 +36,14 @@ in right join he got all the data in the second table and the relation with it n
 
 For Creating Model
 --> php artisan make:model {Model name}
+
+------------------------------------------------------------------------------------------------------------------------
+to make a new migration
+--> php artisan make:migration creat_{name of table}_table --creat={table name}
+
+to rollback with last update migrations you created and delete the hall table depending on the batch from migration table
+--> php artisan migrate:rollback
+to delete the last number of operations on migration
+--> php artisan migrate:rollback --step={ number of operations u want to rollback}
+
+
