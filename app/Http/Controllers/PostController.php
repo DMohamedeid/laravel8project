@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -138,5 +139,11 @@ class PostController extends Controller
             ->get();
 
         return $request;
+    }
+
+    public function getAllPostsFromModel()
+    {
+        $posts = Post::orderBy('id','DESC')->get();
+        return view('Posts.index',compact('posts'));
     }
 }

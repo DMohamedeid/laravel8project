@@ -31,3 +31,8 @@ in inner join he got all data with the relation
 in left join he got all data which in the first table and the relation with it not all the records in the second table only the one with relation
 
 in right join he got all the data in the second table and the relation with it not all the records in the first table only the one with relation
+
+------------------------------------------------------------------------------------------------------------------------
+
+For Creating Model
+--> php artisan make:model {Model name}

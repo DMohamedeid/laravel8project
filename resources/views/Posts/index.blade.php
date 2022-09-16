@@ -12,19 +12,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header text-center">
 
-                        <h1> All Posts </h1>
-                    @if(Session::has('post_created'))
-                        <div class="alert alert-success" role="alert">{{Session::get('post_created')}}</div>
-                    @endif
-                    @if(Session::has('post_updated'))
-                        <div class="alert alert-success" role="alert">{{Session::get('post_updated')}}</div>
-                    @endif
-                    @if(Session::has('post_deleted'))
-                        <div class="alert alert-danger" role="alert">{{Session::get('post_deleted')}}</div>
-                    @endif
-                    </div>
+                    <x-post-component /> <!--this to defines the component  hint the spaces here not allowed -->
+
                     <a href="{{route('post.addPostDB')}}" class=" btn btn-success m-3" > Add New Post </a>
                     <div class="card-body">
                         <table  class="table table-striped table-hover">
