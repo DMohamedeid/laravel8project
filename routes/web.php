@@ -17,7 +17,11 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [ProductController::class,'index'])->name('product.index');
+Route::get('/',function (){
+    return view('home');
+});
+
+Route::get('/product', [ProductController::class,'index'])->name('product.index');
 
 Route::get('/home',[HomeController::class,'index'])->name('home.index'); //always name the route with the controller and the needed function
 Route::get('/home/{parameter}',[HomeController::class,'parameter'])->name('home.parameter');
@@ -91,4 +95,6 @@ Route::get('about-page',function (){
 Route::get('contact-page',function (){
     return view('contact');
 });
+
+Route::get('all-users' , [HomeController::class,'allUsers'])->name('home.allUsers');
 

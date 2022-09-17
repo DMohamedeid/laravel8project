@@ -38,7 +38,7 @@
                             @foreach($posts as $key => $post)
                                 <tr>
                                     <th >
-                                        {{$key++}}
+                                        {{$key += 1}}
                                     </th>
                                     <th >
                                         {{$post->title}}

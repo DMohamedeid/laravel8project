@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -74,5 +75,12 @@ class HomeController extends Controller
         $request->session()->forget('name');
 
         echo "session has been deleted";
+    }
+
+    public function allUsers()
+    {
+        $users = User::orderBy('id','DESC')->paginate(10);
+
+        return view('allUsers',compact('users'));
     }
 }
