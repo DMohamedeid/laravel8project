@@ -79,4 +79,7 @@ Route::get('/right-join',[PostController::class,'rightJoin']);
 
 Route::get('/model-posts',[PostController::class,'getAllPostsFromModel'])->name('post.getAllPostsFromModel');
 
+Route::get('/blade-files',function (){
+    return view('test');
+});
 
