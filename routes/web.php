@@ -83,3 +83,12 @@ Route::get('/blade-files',function (){
     return view('test');
 });
 
+
+Route::get('about-page',function (){
+    return view('about');
+});
+
+Route::get('contact-page',function (){
+    return view('contact');
+});
+
