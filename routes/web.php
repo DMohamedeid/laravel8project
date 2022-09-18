@@ -98,3 +98,8 @@ Route::get('contact-page',function (){
 
 Route::get('all-users' , [HomeController::class,'allUsers'])->name('home.allUsers');
 
+Route::get('/upload-image', function (){
+    return view('add_product_with_image');
+});
+Route::post('/saveWithImage', [ProductController::class, 'saveWithImage'])->name('product.saveWithImage');
+

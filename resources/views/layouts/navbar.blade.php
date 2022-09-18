@@ -38,6 +38,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('home.allUsers')}}">All Users</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upload-image">Product With Upload Image</a>
+                </li>
             </ul>
             <span class="navbar-text">
         Navbar text with an inline element
