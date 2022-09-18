@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,8 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/',function (){
+Route::get('/{local?}',function ($local = null){
+    App::setLocale($local);
     return view('home');
 });
 
