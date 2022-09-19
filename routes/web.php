@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\App;
 |
 */
 
-Route::get('/{local?}',function ($local = null){
-    App::setLocale($local);
+Route::get('/',function (){
+//    App::setLocale($local);
     return view('home');
 });
 
