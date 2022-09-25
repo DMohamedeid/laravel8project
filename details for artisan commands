@@ -61,3 +61,7 @@ if else condition in one line condition
 
 -->  ( here we put the first condition )  ? if first condition ture execute : ( the second condition ? if the first condition not true and the second condition ture execute  : if the first condition and the second condition not true then execute )
 
+------------------------------------------------------------------------------------------------------------------------
+to create mail class
+
+--> php artisan make:mail {name of the mail}

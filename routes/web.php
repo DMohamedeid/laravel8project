@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\App;
 
 /*
@@ -104,4 +105,6 @@ Route::get('/upload-image', function (){
     return view('add_product_with_image');
 });
 Route::post('/saveWithImage', [ProductController::class, 'saveWithImage'])->name('product.saveWithImage');
+
+Route::get('/send-email',[MailController::class,'sendEmail'])->name('sendMail');
 
